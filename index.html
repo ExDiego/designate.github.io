@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="[Diseñador Gráfico] [ Ilustrador] [Desarrollador Full Stack]">
+    <meta name="description" content="[Diseñador Gráfico] [Ilustrador] [Desarrollador Full Stack]">
     <meta name="author" content="Diego Salas">
     <meta name="keywords" content="diseño grafico, desarrollador full stack, illustracion, branding">
     <link rel="shortcut icon" href="assets/img/icons/ds_logo01.svg">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="path/to/mdb.min.css">
+
     <title>Designate</title>
 </head>
 <body>
@@ -17,7 +17,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <img src="assets/img/designate_log02.svg" alt="" width="150" height="80" class="ms-3">
+            <img src="assets/img/designate_log02.svg" alt="" width="150" height="30" class="ms-3">
           </a>
           <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -25,12 +25,12 @@
           <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
             <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link" aria-current="page" href="#section1">Inicio</a>
               </li>
               <!-- dropdown project -->
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Projects
+                  Proyectos
                 </a>
                 <ul class="dropdown-menu dropdown-menu-animated">
                   <li><a class="dropdown-item" href="#section2">Servicios</a></li>
@@ -44,7 +44,7 @@
               </li>
               
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="#">Contacto</a>
               </li>
             </ul>
           </div>
@@ -53,32 +53,33 @@
   <!--Fin Navbar-->
 
   <!--section01-->
-<section class="section01 container-fluid pt-5" style="text-align: center;">
-    <h2 class="solucion">
-      Desde la idea hasta la identificación
-    </h2>
-<!--     <h2 class="solucion2">
-      Branding que define tu marca
-    </h2> -->
-
-  <!--marca-->
-  <div class="mt-5">
-    <div class="cuadrado container-fluid">
-      <p class="sobremarca">
-        En Designate, entendemos que un proyecto de branding va más allá de la creatividad. 
-        Nos enfocamos en resolver problemas clave basados en las necesidades únicas de tu marca. 
-        Cada diseño que creamos cumple con altos estándares de calidad gráfica y rendimiento, 
-        asegurando que tu marca no solo sea visualmente impactante, sino también efectiva y alineada 
-        con los objetivos de tu empresa o producto.
-      </p>
-      <p class="solucion3">
-        Si buscas un enfoque estratégico y personalizado que eleve tu identidad de marca, 
-        estamos aquí para ayudarte. ¡Hablemos sobre cómo podemos transformar tu visión en 
-        una marca poderosa!
-      </p>
-    </div>
-    <div class="p-5">
-      <a href="#section2" class="btn btn-outline-dark">Quiero saber más...</a>
+<section id="section1" class="section01 container-fluid pt-5" style="text-align: center; margin-top: 30;">
+  <div>
+      <h2 class="solucion">
+        Desde la idea hasta la identificación
+      </h2>
+    <!--marca-->
+    <div class="content-wrapper mt-5">
+      <div class="cuadrado container-fluid">
+        <p class="sobremarca d-none d-md-block" id="mobile-text">
+          En Designate, entendemos que un proyecto de branding va más allá de la creatividad. 
+          Nos enfocamos en resolver problemas clave basados en las necesidades únicas de tu marca. 
+          Cada diseño que creamos cumple con altos estándares de calidad gráfica y rendimiento, 
+          asegurando que tu marca no solo sea visualmente impactante, sino también efectiva y alineada 
+          con los objetivos de tu empresa o producto.
+        </p>
+        <button class="btn btn-dark m-2 d-lg-none" id="toggle-text">Mostrar más</button>
+        <p class="solucion3">
+          Si buscas un enfoque estratégico y personalizado que eleve tu identidad de marca, 
+          estamos aquí para ayudarte. ¡Hablemos sobre cómo podemos transformar tu visión en 
+          una marca poderosa!
+        </p>
+      </div>
+      <div class="p-5">
+        <a href="#section2" class="btn btn-outline-dark mx-2">Saber más...</a>
+        <a href="#" class="btn btn-outline-dark mx-2">Contáctame</a>
+      </div>
+      
     </div>
   </div>
 </section>
@@ -87,93 +88,98 @@
 <!--section02-->
 
 <section id="section2" class="section02">
-  
-  <div class="Branding1 container-fluid pt-5" style="text-align: center;">
-    <h2 class="servicio">
-      Servicios
-    </h2>
-    <h2 class="servicio2">
-      Solución adecuada a tu problemática
-    </h2>
-  </div>
 
-  
-  <div class="card-group p-5" ><!--lookhere-->
-    <!--card1-->
-    <div class="card text-center">
-      <div class="iconinfo p-3">
-        <a href="">
-         <img src="assets/img/icons/icon_glass.svg" style="max-width: 50px;" class="text-center" alt="...">
-        </a>
-      </div>
-      <div class="cardi-body">
-
-          <a href="" class="cardi-title">Auditoría de Marca</a>
-          <div>
-            <p class="cardi-text">Analizamos y evaluamos el rendimiento y la percepción de una marca ya establecida 
-              en el mercado. Se examinarán los elementos como la identidad visual, el posicionamiento, la comunicación 
-              y la coherencia con los valores de la empresa, para identificar fortalezas, debilidades y oportunidades 
-              de mejora en su estrategia.
-            </p>
-          </div>
-      </div>
+  <div>
+    <div class="Branding1 container-fluid pt-5" style="text-align: center;">
+      <h2 class="servicio">
+        Servicios
+      </h2>
+      <h2 class="servicio2">
+        Solución adecuada a tu problemática
+      </h2>
     </div>
-    <!--card2-->
-    <div class="card mx-2 text-center" >
+
+    
+    <div class="card-group p-5" ><!--lookhere-->
+      <!--card1-->
+      <div class="card3 text-center">
         <div class="iconinfo p-3">
           <a href="">
-            <img src="assets/img/icons/icon_briefcase-31.svg" style="max-width: 50px;" class="text-center" alt="...">
+          <img src="assets/img/icons/icon_glass.svg" style="max-width: 50px;" class="text-center" alt="...">
+          </a>
+        </div>
+        <div class="cardi-body">
+
+            <a href="" class="cardi-title">Auditoría de Marca</a>
+            <div>
+              <p class="cardi-text">Analizamos y evaluamos el rendimiento y la percepción de una marca ya establecida 
+                en el mercado. Se examinarán los elementos como la identidad visual, el posicionamiento, la comunicación 
+                y la coherencia con los valores de la empresa, para identificar fortalezas, debilidades y oportunidades 
+                de mejora en su estrategia.
+              </p>
+            </div>
+        </div>
+      </div>
+      <!--card2-->
+      <div class="card3 mx-2 text-center">
+          <div class="iconinfo p-3">
+            <a href="">
+              <img src="assets/img/icons/icon_briefcase-31.svg" style="max-width: 50px;" class="text-center" alt="...">
+            </a>
+          </div>
+        <div class="cardi-body">
+            <a href="" class="cardi-title">
+              Sistema de identificación Visual
+            </a>
+            <div>
+              <p class="cardi-text">O Identidad Visual, es el conjunto de elementos gráficos que 
+                representan y diferencian a una marca, como el logotipo, los símbolos, los colores, 
+                la tipografía y el estilo visual. Estos componentes crean una imagen coherente y reconocible, 
+                que comunica los valores y la personalidad de la marca de manera visual y estética.
+              </p>
+            </div>
+        </div>
+      </div>
+      <!--card3-->
+      <div class="card3 text-center">
+        <div class="iconinfo p-3 pt-4">
+          <a href="">
+          <img src="assets/img/icons/icon_idea.svg" style="max-width: 50px;" class="text-center" alt="...">
           </a>
         </div>
       <div class="cardi-body">
-          <a href="" class="cardi-title">
-            Sistema de identificación de Marca
-          </a>
-          <div>
-            <p class="cardi-text">O Identidad Visual, es el conjunto de elementos gráficos que 
-              representan y diferencian a una marca, como el logotipo, los símbolos, los colores, 
-              la tipografía y el estilo visual. Estos componentes crean una imagen coherente y reconocible, 
-              que comunica los valores y la personalidad de la marca de manera visual y estética.
-            </p>
+            <a href="" class="cardi-title">
+              Servicios de Diseño Gráfico
+            </a>
+          <div> 
+            <lu class="card2-text">
+            <li class="card2-text">
+              Diseño editorial
+            </li>
+            <li class="card2-text">
+              Diseño Publicitario
+            </li>
+            <li class="card2-text">
+              Ilustraciones
+            </li>
+            <li class="card2-text">
+              Diseño de Merchandising
+            </li>
+            <li class="card2-text">
+              Animación y Motion Graphics
+            </li>
+            <li class="card2-text">
+              Diseño de señalización
+            </li>
+            <li class="card2-text">
+              Diseño para Redes Sociales 
+            </li>
+            <li class="card2-text">
+              Diseño Material Corporativo
+            </li>
+          </lu>
           </div>
       </div>
-    </div>
-    <!--card3-->
-    <div class="card text-center" >
-      <div class="iconinfo p-3">
-        <a href="">
-        <img src="assets/img/icons/icon_idea.svg" style="max-width: 50px;" class="text-center" alt="...">
-        </a>
-      </div>
-    <div class="cardi-body">
-          <a href="" class="cardi-title">
-            Servicios de Diseño Gráfico
-          </a>
-        <div> 
-          <lu class="card2-text">
-          <li class="card2-text">
-            Diseño editorial
-          </li>
-          <li class="card2-text">
-            Diseño Publicitario
-          </li>
-          <li class="card2-text">
-            Diseño de señalización y Exposiciones
-          </li>
-          <li class="card2-text">
-            Diseño de Merchandising
-          </li>
-          <li class="card2-text">
-            Animación y Gráficos en Movimiento
-          </li>
-          <li class="card2-text">
-            Diseño de Envases y Etiquetas
-          </li>
-          <li class="card2-text">
-            Diseño de Gráficas para Redes Sociales 
-          </li>
-        </lu>
-        </div>
     </div>
   </div>
 
@@ -181,118 +187,222 @@
 
 <!--section03-->
 <section id="section3" class="section03">
-  <div class="Branding1 container-fluid pt-5" style="text-align: center;">
-    <h2 class="solucion">
-      BRANDING
-    </h2>
-    <h2 class="solucion2">
-      Logotipo/Marca Gráfica
-    </h2>
-  </div>
+  <div>
+    <div class="Branding1 container-fluid pt-5" style="text-align: center;">
+      <h2 class="solucion">
+        BRANDING
+      </h2>
+      <h2 class="solucion2">
+        Logotipo/Marca Gráfica
+      </h2>
+    </div>
 
-  <!---proyectos de branding-->
-  <div class="card-group p-5" style="text-align: center;"><!--lookhere-->
-    <div class="card">                                    <!--n here-->
-      <img src="assets/img/Marcas_01/kaleidoscopio_marca.png" class="card-img-top" alt="...">
-      <div class="content">
-        <img src="assets/img/icons/icon_plus.svg" class="" style=" max-height: 30%;" alt="...">
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">Kaleidoscopio</h5>
-        <p class="card-text">Marca Gráfica</p>
-      </div>
+    <!---proyectos de branding-->
+    <div class="card-group"><!--lookhere-->
+      <a href="kaleidoscopio.html">
+        <div class="card">                                    <!--n here-->
+          <img src="assets/img/Marcas_01/kaleidoscopio_marca.png" class="card-img-top" alt="...">
+          <div class="content">
+            <img src="assets/img/icons/icon_plus.svg" class="" style=" max-height: 30%;" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Kaleidoscopio</h5>
+            <p class="card-text">Marca Gráfica</p>
+          </div>
+        </div>
+      </a>
+      <a href="">
+        <div class="card mx-2">                               <!--n here-->
+          <img src="assets/img/Marcas_01/romerovet_marca.png" class="card-img-top" alt="...">
+          <div class="content">
+            <img src="assets/img/icons/icon_plus.svg" class="" style=" max-height: 30%;" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Romero Vet</h5>
+            <p class="card-text">Marca Gráfica</p>
+          </div>
+        </div>
+      </a>
+      <a href="">
+        <div class="card">                                     <!--n here-->
+          <img src="assets/img/Marcas_01/raimundo_marca.png" class="card-img-top" alt="...">
+          <div class="content">
+            <img src="assets/img/icons/icon_plus.svg" class="" style=" max-height: 30%;" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Raimundo Torres Riedemann</h5>
+            <p class="card-text">Sistema de identificación Visual</p>
+          </div>
+        </div>
+      </a>
     </div>
-    <div class="card mx-2">                               <!--n here-->
-      <img src="assets/img/Marcas_01/romerovet_marca.png" class="card-img-top" alt="...">
-      <div class="content">
-        <img src="assets/img/icons/icon_plus.svg" class="" style=" max-height: 30%;" alt="...">
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">Romero Vet</h5>
-        <p class="card-text">Marca Gráfica</p>
-      </div>
-    </div>
-    <div class="card">                                     <!--n here-->
-      <img src="assets/img/Marcas_01/raimundo_marca.png" class="card-img-top" alt="...">
-      <div class="content">
-        <img src="assets/img/icons/icon_plus.svg" class="" style=" max-height: 30%;" alt="...">
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">Raimundo Torres Riedemann</h5>
-        <p class="card-text">Sistema de identificación Visual</p>
-      </div>
+    <!--Separación de las filas de cards proyectos de branding-->
+    <div class="card-group pb-5"><!--lookhere-->
+      <a href="">
+        <div class="card">                                    <!--n here-->
+          <img src="assets/img/Marcas_01/kaleidoscopio_marca.png" class="card-img-top" alt="...">
+          <div class="content">
+            <img src="assets/img/icons/icon_plus.svg" class="" style=" max-height: 30%;" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Kaleidoscopio</h5>
+            <p class="card-text">Marca Gráfica</p>
+          </div>
+        </div>
+      </a>
+      <a href="">
+        <div class="card mx-2">                               <!--n here-->
+          <img src="assets/img/Marcas_01/romerovet_marca.png" class="card-img-top" alt="...">
+          <div class="content">
+            <img src="assets/img/icons/icon_plus.svg" class="" style=" max-height: 30%;" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Romero Vet</h5>
+            <p class="card-text">Marca Gráfica</p>
+          </div>
+        </div>
+      </a>
+      <a href="">
+        <div class="card">                                     <!--n here-->
+          <img src="assets/img/Marcas_01/raimundo_marca.png" class="card-img-top" alt="...">
+          <div class="content">
+            <img src="assets/img/icons/icon_plus.svg" class="" style=" max-height: 30%;" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Raimundo Torres Riedemann</h5>
+            <p class="card-text">Sistema de identificación Visual</p>
+          </div>
+        </div>
+      </a>
     </div>
   </div>
 </section>
 
 <!--section04-->
 <section id="section4" class="section04">
-  <div class="Branding1 container-fluid" style="text-align: center;">
-    <h2 class="solucion pt-5">
-      Proyectos de Diseño
-    </h2>
-    <h2 class="solucion2">
-      Afiches
-    </h2>
-  </div>
-  <div class="card-group">
-    <div class="card">
-      <img src="assets/img/afiches/Open2.jpg" class="card-img-top" alt="...">
-      <div class="carda-body p-3">
-        <h5 class="card-title">Open Valley</h5>
-        <p class="card-text">Diseño de afiche para evento en club nocturno Arica.</p>
-      </div>
+  <div class="pb-5">
+    <div class="Branding1 container-fluid" style="text-align: center;">
+      <h2 class="solucion pt-5 pb-3">
+        Proyectos de Diseño
+      </h2>
     </div>
-     <div class="card">
-      <img src="assets/img/afiches/Open1.jpg" class="card-img-top" alt="...">
-      <div class="carda-body p-3">
-        <h5 class="card-title">Open Valley</h5>
-        <p class="card-text">Diseño de afiche para evento en club nocturno Arica.</p>
+<!--carosusel1-->
+<div class="carousel-container">
+      <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" style="max-width: 400px; margin: 0 auto;">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="afiches/open1.html">
+            <img src="assets/img/afiches/Open1.jpg" class="d-block w-100" alt="...">
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="afiches/open2.html">
+            <img src="assets/img/afiches/Open2.jpg" class="d-block w-100" alt="...">
+          </a>
+          </div>
+          <div class="carousel-item">
+            <a href="afiches/enjambre1.html">
+              <img src="assets/img/afiches/Afiche_Enjambre_14_dic.jpg" class="d-block w-100" alt="...">
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="afiches/enjambre2.html">
+              <img src="assets/img/afiches/Afiche_Enjambre_25_Abr.jpg" class="d-block w-100" alt="...">
+            </a>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-    </div>
-  </div>
-    <div class="card-group">
-    <div class="card mb-3">
-      <img src="assets/img/afiches/Afiche_Enjambre_14_dic.jpg" class="card-img-top" alt="...">
-      <div class="carda-body p-3">
-        <h5 class="card-title">Obra Enjambre</h5>
-        <p class="card-text">Afiche de difusión para estreno de Obra Enjambre.</p>
+      <!--carousel2-->
+      <div id="carouselExampleControlsNoTouching2" class="carousel slide" data-bs-touch="false" style="max-width: 400px; margin: 0 auto;">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="ilustracones/ilus_01.html">
+            <img src="assets/img/Ilustracion/princesa_demoniaca.jpg" class="d-block w-100" alt="...">
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="ilustracones/ilus_02.html">
+            <img src="assets/img/Ilustracion/espiritu_desierto.jpg" class="d-block w-100" alt="...">
+          </a>
+          </div>
+          <div class="carousel-item">
+            <a href="ilustracones/ilus_03.html">
+              <img src="assets/img/Ilustracion/diosa_de_la_muerte.jpg" class="d-block w-100" alt="...">
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="ilustracones/ilus_04.html">
+              <img src="assets/img/Ilustracion/venado_bajo_la_lluvia.jpg" class="d-block w-100" alt="...">
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="ilustracones/ilus_05.html">
+              <img src="assets/img/Ilustracion/venado_fuego.jpg" class="d-block w-100" alt="...">
+            </a>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching2" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching2" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-    </div>
-     <div class="card mb-3">
-      <img src="assets/img/afiches/Afiche_Enjambre_25_Abr.jpg" class="card-img-top" alt="...">
-      <div class="carda-body p-3">
-        <h5 class="card-title">Obra Enjambre</h5>
-        <p class="card-text">Afiche de difusión para estreno de Obra Enjambre.</p>
+      <!--carousel3-->
+      <div id="carouselExampleControlsNoTouching3" class="carousel slide" data-bs-touch="false" style="max-width: 400px; margin: 0 auto;">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="ilustracones/ilus_01.html">
+            <img src="assets/img/Ilustracion/princesa_demoniaca.jpg" class="d-block w-100" alt="...">
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="ilustracones/ilus_02.html">
+            <img src="assets/img/Ilustracion/espiritu_desierto.jpg" class="d-block w-100" alt="...">
+          </a>
+          </div>
+          <div class="carousel-item">
+            <a href="ilustracones/ilus_03.html">
+              <img src="assets/img/Ilustracion/diosa_de_la_muerte.jpg" class="d-block w-100" alt="...">
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="ilustracones/ilus_04.html">
+              <img src="assets/img/Ilustracion/venado_bajo_la_lluvia.jpg" class="d-block w-100" alt="...">
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="ilustracones/ilus_05.html">
+              <img src="assets/img/Ilustracion/venado_fuego.jpg" class="d-block w-100" alt="...">
+            </a>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching3" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching3" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
+      
     </div>
-  </div>
+</div>
 </section>
 
 <!--section05-->
 <section id="section5" class="section05">
-  <div class="Branding1 container-fluid pt-5" style="text-align: center;">
-    <h2 class="solucionilu" p-3>
-      Ilustración
-    </h2>
-  </div>
-
-  <div class="">
-    <div class="">
-      <img src="assets/img/Ilustracion/princesa_demoniaca.jpg" class="card-img-top" alt="...">
-    </div>
-    <div class="">
-      <img src="assets/img/Ilustracion/diosa_de_la_muerte.jpg" class="card-img-top" alt="...">
-    </div>
-    <div class="">
-      <img src="assets/img/Ilustracion/venado_bajo_la_lluvia.jpg" class="card-img-top" alt="...">
-    </div>
-  </div>
-  <div class="">
-    <img src="assets/img/Ilustracion/venado_fuego.jpg" class="card-img-top" alt="...">
-  </div>
-</div>
-
 </section>
 
 
@@ -307,9 +417,10 @@
 </footer>
 
 
-  
-      <script src="path/to/mdb.min.js"></script>
-      <script src="path/to/your/index.js"></script>
+<!--       <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script> -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.0.0/mdb.umd.min.js"></script>
+      <script type="module" src="index.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
       <script src="assets/js/scripts.js"></script>   
