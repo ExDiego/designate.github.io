@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 @media (max-width: 767px) {
     .dropdown-menu {
@@ -65,7 +66,7 @@ a {
 }
 
 .section05{
-    background-color: #1a191e;
+    background-color: #dbdbdb30;
     min-height: 100vh;
 }
 
@@ -96,7 +97,11 @@ a {
     
 }
 
-
+@media (max-width: 576px) {
+    .solucion {
+        padding-top: 2rem;
+    }
+}
 @media (max-width: 767px) {
     .solucion {
         padding-top: 2rem;
@@ -148,9 +153,62 @@ color: #7f7c7c;
 text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
 }
 
+/* SOBRE MI */
+
+.sobremi {
+    font-family: "Nunito Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-size: 13px;
+    font-style: normal;
+    color: #7f7c7c; 
+    text-shadow: 0px 0px 1px rgba(0, 0.3, 0, 0.3);
+    }
+
+.mymail {
+    color: #313131;
+    font-family: "nunito sans", serif;
+    font-weight: 650;
+    font-size:15px;
+}
+    
+.mymail:hover {
+    opacity:0.5;
+}
+
+.fa-clipboard {
+    font-size: 20px;
+}
+
+.fa-clipboard:hover {
+    opacity:0.5;
+}
+
+.fa-whatsapp {
+    font-size: 25px;
+    color: #313131;
+    text-decoration: none;
+}
+.fa-whatsapp:hover {
+    color:rgb(251, 95, 123);
+}
+
+.wsplink {
+    color: #313131;
+    text-decoration: none !important;
+    font-family: "nunito sans", serif;
+    font-weight: 650;
+    font-size:15px;
+}
+
+.wsplink:hover {
+    color:rgb(251, 95, 123);
+}
+
+
 #mobile-text {
     display: none;
-    opacity: 1;
+    opacity: 0;
     transition: opacity 0.3 s ease-in-out;
 }
 
@@ -163,6 +221,10 @@ text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
     overflow: hidden;
 }
 
+
+
+
+/* SERVICIOS DE DISEÑO */
 
 .servicio {
     font-family: "DM Serif Text", serif;
@@ -182,6 +244,8 @@ text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
 }
 
 
+/*Footer*/
+
 footer {
     background-color: #313131;
 }
@@ -191,6 +255,9 @@ footer {
     color: #dbdbdbfa !important;
 
 }
+
+
+/*Cards*/
 
 .card {
     width: 300px;
@@ -372,35 +439,51 @@ footer {
     }
 }
 
-/* .img-fullscreen {
-    width: 100vw;
-    object-fit:cover;
-
-} */
 
 
-/* zoom images */
-.img-fullscreen {
-    transition: transform 0.3s ease-in-out;
+/* SUPER ZOOM */
+
+
+.sectionIlu1 {
+    background-color: #181818;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+    
 }
 
-.img-fullscreen.zoomed {
-    transform: scale(1.5);
-    cursor: zoom-out;
-}
 
-.img-fullscreen.zoomed {
-    transform: scale(2);
-    cursor: zoom-out;
-}
-.lupa-icon {
-    width: 50px;
-    z-index: 1001;
-}
+
 .image-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: auto; /* Permitir scroll cuando se haga zoom */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    overflow: hidden;
 }
+
+
+.img-fullscreen {
+    width: auto;
+    height: auto;
+    max-width: none;
+    max-height: none;
+    cursor: zoom-in;
+    transition: transform 0.3s ease-in-out;
+    display: block;
+    position: relative; /* Ajuste clave */
+}
+
+
+
+
+
+
 .cancel {
     position: fixed;
     z-index: 1000;
@@ -420,16 +503,14 @@ footer {
     box-shadow: none;
 }
 .cancel:active {
-    transform: scale(1.2);
+    transform: scale(1.15);
     background-color: transparent;
     border: none;
     box-shadow: none;
 }
 
 
-/* .img-hover:hover {
-    cursor: url(/assets/img/icons/cursor_glass-38.svg), auto;
-} */
+/* CAROUSEL */
 
 .carousel-container {
     display: flex;
