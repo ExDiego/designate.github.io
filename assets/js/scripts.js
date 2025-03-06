@@ -116,7 +116,7 @@ img.addEventListener("click", function(event) {
 
 
 //// Lista de servicios /////
-
+/* 
 const triggerTabList = document.querySelectorAll('#myTab a')
 triggerTabList.forEach(triggerEl => {
   const tabTrigger = new bootstrap.Tab(triggerEl)
@@ -125,12 +125,12 @@ triggerTabList.forEach(triggerEl => {
     event.preventDefault()
     tabTrigger.show()
   })
-})
+}) */
 
 
 ///Off Canvas Móvil///
 
-document.addEventListener("DOMContentLoaded", function () {
+/* document.addEventListener("DOMContentLoaded", function () {
     console.log("DOM completamente cargado");
 
     // Obtener elementos
@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     console.log("Event listeners agregados correctamente.");
-});
+}); */
 
 
 
