@@ -1,3 +1,7 @@
+
+
+////COPY/////
+
 document.addEventListener("DOMContentLoaded", function() {
     console.log("DOM completamente cargado"); // Verifica que el DOM está listo
     document.getElementById("toggle-text").addEventListener("click", function() {
@@ -34,6 +38,24 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+/////NAVBAR/////
+
+window.addEventListener("scroll", function () {
+    let navbar = document.querySelector(".navbar");
+    if (window.scrollY > 50) { // Cuando scrolleas más de 50px
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+});
+
+
+
+
+
+
 
 
 /////CANCEL//////
@@ -90,6 +112,62 @@ img.addEventListener("click", function(event) {
         isZoomed = false;
     }
 });
+
+
+
+//// Lista de servicios /////
+
+const triggerTabList = document.querySelectorAll('#myTab a')
+triggerTabList.forEach(triggerEl => {
+  const tabTrigger = new bootstrap.Tab(triggerEl)
+
+  triggerEl.addEventListener('click', event => {
+    event.preventDefault()
+    tabTrigger.show()
+  })
+})
+
+
+///Off Canvas Móvil///
+
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("DOM completamente cargado");
+
+    // Obtener elementos
+    const offcanvas = document.getElementById("offcanvas-menu");
+    const toggleButton = document.getElementById("menu-toggle");
+
+    if (!offcanvas || !toggleButton) {
+        console.error("No se encontró el menú offcanvas o el botón de activación.");
+        return; // Evita que el código siga ejecutándose si los elementos no existen
+    }
+
+    console.log("Elementos encontrados:", offcanvas, toggleButton);
+
+    const links = offcanvas.querySelectorAll("a");
+
+    function closeOffcanvas() {
+        offcanvas.classList.remove("open");
+    }
+
+    toggleButton.addEventListener("click", function (event) {
+        event.stopPropagation();
+        offcanvas.classList.toggle("open");
+    });
+
+    document.addEventListener("click", function (event) {
+        if (!offcanvas.contains(event.target) && !toggleButton.contains(event.target)) {
+            closeOffcanvas();
+        }
+    });
+
+    links.forEach(link => {
+        link.addEventListener("click", closeOffcanvas);
+    });
+
+    console.log("Event listeners agregados correctamente.");
+});
+
 
 
 
