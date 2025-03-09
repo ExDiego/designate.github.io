@@ -53,11 +53,6 @@ window.addEventListener("scroll", function () {
 
 
 
-
-
-
-
-
 /////CANCEL//////
 
 
@@ -66,11 +61,20 @@ function goBack() {
 }
 
 
-/////CANCEL/////
+
+
+////zooom experimental////
 
 
 
-const img = document.getElementById("zoomable-image");
+
+
+
+
+
+/////ZOOM/////
+
+/* const img = document.getElementById("zoomable-image");
 const container = document.querySelector(".image-container");
 const zoomWrapper = document.querySelector(".zoom-wrapper");
 
@@ -111,7 +115,7 @@ img.addEventListener("click", function(event) {
 
         isZoomed = false;
     }
-});
+}); */
 
 
 
