@@ -18,16 +18,37 @@
     <section class="sectionIlu1">
         <div>
             <div>
-                <img src="../assets/img/icons/icon_cancel_negative.svg"  class="btn cancel m-3" style="max-width: 100px; top: 10px; right: 10px;" onclick="goBack()">
+                <img src="../assets/img/icons/icon_cancel_negative.svg"  class="btn cancel m-3" style="max-width: 100px; top: 10px; right: 15px;" onclick="goBack()">
             </div>  
-            
-            <div class="image-container" style="text-align: center;">
-                <div class="">              
-                    <img src="../assets/img/afiches/Open1.jpg" class="img-nozoom" id="" style="max-width: 100%; max-height: 100vh; " alt="...">
+
+
+
+                <div id="imageZoom" style="
+                    --url: url(../img/afiches/Open1.jpg);
+                    --zoom-x: 0%; --zoom-y: 0%;
+                    --display: none      
+                ">              
+                    <img src="./Open1.jpg">
                 </div>  
-            </div>
+        
         </div>
     </section>
+
+    <script>
+        let imageZoom = document.getElementById('imageZoom');
+        imageZoom.addEventListener('mousemove', (event) => {
+            imageZoom.style.setProperty('--display', 'block');
+            let pointer = {
+                x:  (event.offsetX * 100) / imageZoom.offsetWidth,
+                y:  (event.offsetY * 100) / imageZoom.offsetHeight
+            }
+            imageZoom.style.setProperty('--zoom-x', pointer.x + '%');
+            imageZoom.style.setProperty('--zoom-y', pointer.y + '%');
+        })
+        imageZoom.addEventListener('mouseout', () => {
+            imageZoom.style.setProperty('--display', 'none');
+        })
+    </script>
 
 
     <footer class="bg-body- text-center text-lg-start">
