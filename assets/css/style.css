@@ -3,9 +3,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
+
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    opacity: 80%;
+    transition: background 0.3s ease-in-out;
+}
+
+.navbar:hover {
+    opacity: 100%;
+    transition: 1s;
+}
+
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.nav-link {
+    color: #f0eded;
+}
+
+/* Estilos generales del dropdown */
+/* Animación suave del submenú */
+.dropdown-menu-animated {
+    opacity: 0;
+    transform: translateY(-10px);
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 1000;
+    display: block; /* Para evitar que Bootstrap lo oculte */
+}
+
+/* Cuando el dropdown está activo */
+.dropdown.show .dropdown-menu-animated {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+
+
+.dropdown-menu-animated.show {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+
+/* Solución para pantallas pequeñas */
 @media (max-width: 767px) {
+    /* Asegurar que el menú principal no deje espacio extra */
+    .navbar-collapse {
+        overflow: hidden;
+    }
+
+    /* Hacer que el submenú no afecte el tamaño del menú */
     .dropdown-menu {
-        margin-bottom: -180px;
+        position: absolute; /* Permite que el submenú flote */
+        top: 100%; /* Se coloca justo debajo del botón que lo activa */
+        left: 0;
+        width: 100%;
+        display: none; /* Ocultar completamente cuando no está activo */
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    }
+
+    /* Cuando el dropdown está activo */
+    .dropdown.show .dropdown-menu {
+        display: block; /* Mostrar el menú */
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+
+
+
+/* @media (max-width: 767px) {
+    .dropdown-menu {
+        margin-bottom: -150px;
     }
     .dropdown.show .dropdown-menu {
         margin-bottom: 1rem;
@@ -13,7 +98,14 @@
     .dropdown.show + li {
         margin-top: 1rem;
     }
+} */
+
+.dropdown-item:focus,
+.dropdown-item:active {
+    background-color: #393939 !important; /* Cambia el color al que prefieras */
+    color: white !important; /* Cambia el color del texto si es necesario */
 }
+
 
 
 @media (max-width: 768px) {
@@ -60,6 +152,7 @@ a {
     justify-content: center;
 }
 
+
 .section04{
     background-color: #dbdbdb50;
     min-height: 100vh;
@@ -73,38 +166,6 @@ a {
 
 
 
-.navbar {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    opacity: 1,5;
-    transition: background 0.3s ease-in-out;
-}
-
-.navbar.scrolled {
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.nav-link {
-    color: #f0eded;
-}
-
-.dropdown-menu-animated {
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 750ms ease, transform 750ms ease;
-    display: block;
-    visibility: hidden;
-    z-index: 1000;
-}
-
-.dropdown-menu-animated.show {
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible;
-    
-}
 
 @media (max-width: 576px) {
     .solucion {
@@ -155,14 +216,24 @@ a {
 
 
 .sobremarca {
-font-family: "Nunito Sans", serif;
-text-align: justify;
-font-optical-sizing: auto;
-font-weight: 300;
-font-style: normal;
-color: #7f7c7c; 
-text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+    font-family: "Nunito Sans", serif;
+    text-align: justify;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: #7f7c7c; 
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
 }
+
+/* 1eros botones */
+
+@media (max-width: 367px) {
+    .boton2 {
+        margin-top: 1rem;
+    }
+
+}
+
 
 /* SOBRE MI */
 
@@ -265,12 +336,114 @@ footer {
 
 }
 
+/* Web */
+
+.sectionweb{
+    background-color: #313131;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardweb .card-body {
+    background-color: #efefef;
+    color: #dbdbdb;
+}
+
+.cardweb {
+    padding: 2rem;
+}
+
+/* .cardweb .cardw {
+    width: 550px;
+    height: 200px;
+    
+}  */
+
+@media (max-width: 768px) {
+    .card-web {
+    position:relative;
+    text-align: center;
+    padding-left: 20px;
+    margin-left: 20px;
+
+    }
+}
+
+.aweb-title {
+    font-family: "nunito sans";
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 25px;
+    color: #313131; 
+    
+    
+}
+
+
+
+.aweb-title:hover {
+
+    
+    color:rgb(251, 95, 123);
+    text-decoration: underline;
+
+    
+}
+
+.cardweb
+    .a-bri    
+        img {
+            transition:0.3s ease-in-out;
+        }
+.cardweb .a-bri:hover img {
+            filter:brightness(100%) opacity(50%);
+        }
+
+
+.imgweb {
+    width:100%;
+    height: 100%;
+    top:0;
+    left:0;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.748);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+    color: #dbdbdb69 ;
+}
+
+.imgweb:hover {
+   opacity: 1;
+}
+
+@media (min-width: 768px) {
+    .cardweb .card {
+        max-width: 300px;
+        text-align: center;
+    }
+}
 
 /*Cards*/
 
-.card {
-    width: 300px;
-    text-align: center;
+.section03
+    .card {
+            max-width: 300px;
+            text-align: center;
+            
+    }
+
+@media (min-width: 768px) {
+    .card3 {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
 
 .card3 {
@@ -283,9 +456,6 @@ footer {
 }
 
 
-.card-body {
-    line-height: 0.5;
-}
 
 
 .card-title {
@@ -327,12 +497,21 @@ footer {
     color: #dbdbdb69 ;
 }
 
+
 .content:hover {
    opacity: 1;
 }
 
+.iconinfo {
+    transition: transform 0.6s;
+}
+
 .iconinfo:hover {
     transform: scale(1.2);
+}
+
+.iconinfo {
+    transform: scale(1);
 }
 
 .card-group {
@@ -353,7 +532,7 @@ footer {
     font-style: normal;
     font-size: 23px;
     color: #313131; 
-    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+
     text-decoration: none;
 
 }
@@ -372,7 +551,6 @@ footer {
     font-style: normal;
     font-size: 15px;
     color: #7f7c7c; 
-    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
     text-align: initial;
     padding-top: 2rem;
     padding-left: 2rem;
@@ -400,25 +578,9 @@ footer {
 }
 
 
-.card-title {
-    font-family: "EB Garamond", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 23px;
-    color: #313131; 
-    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
-}
 
-.card-text {
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: normal;
-    font-size: 15px;
-    color: #7f7c7c; 
-    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
-}
+
+
 
 
 .solucionilu {
@@ -459,7 +621,6 @@ footer {
 #imageZoom {
     width: 550px;
     height: 700px;
-
     position: relative;
 }
 #imageZoom img{
@@ -593,11 +754,6 @@ footer {
     
 }
 
-.carousel_titulo:hover {
-    text-shadow: 0px 1px 3px rgb(51, 95, 109);
-    transition: 1s;
-
-}
 
 .carousel-inner {
     max-width: 350px;
@@ -765,6 +921,8 @@ footer {
     justify-content: center;
 }
 
+
+
 .cuadradologo {
     width: 80%;
     max-width: 800px;
@@ -774,6 +932,7 @@ footer {
 
 
 .titulogo {
+    max-width: 100%;
     font-family: "DM Serif Text", serif;
     font-weight: 400;
     font-style: normal;
@@ -782,6 +941,18 @@ footer {
     color: #313131;
     text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
 }
+
+.titulogo2 {
+    max-width: 100%;
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
+    letter-spacing: 3px;
+    color: #313131;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
 
 .p_italic {
     font-family: "Nunito Sans", serif;
