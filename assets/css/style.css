@@ -227,7 +227,7 @@ a {
 
 /* 1eros botones */
 
-@media (max-width: 367px) {
+@media (max-width: 401px) {
     .boton2 {
         margin-top: 1rem;
     }
@@ -272,7 +272,7 @@ a {
     text-decoration: none;
 }
 .fa-whatsapp:hover {
-    color:rgb(251, 95, 123);
+    color:#fb5f7b;
 }
 
 .wsplink {
@@ -387,7 +387,7 @@ footer {
 .aweb-title:hover {
 
     
-    color:rgb(251, 95, 123);
+    color:#fb5f7b;
     text-decoration: underline;
 
     
@@ -538,7 +538,7 @@ footer {
 }
 
 .cardi-title:hover {
-    color:rgb(251, 95, 123);
+    color:#fb5f7b;
     text-decoration: underline!important;
 }
 
@@ -862,7 +862,7 @@ footer {
 }
 
 .titulo_indice:hover {
-    color: crimson;
+    color: #dc143c;
     text-decoration:line-through;
 }
 
@@ -976,4 +976,26 @@ footer {
 .linkrai:hover {
     text-decoration: underline;
     color: #5d7fa8;
+}
+
+
+
+
+.section-video{
+    
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: #dbdbdb80;
+    display: flexbox; 
+    justify-content: center;
+}
+
+
+.titulo-video {
+    max-width: 100%;
+    font-family: "Nunito Sans", serif;
+    font-weight: 800;
+    font-size: 25px;
+    color: #313131;
+    
 }
